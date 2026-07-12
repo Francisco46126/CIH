@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="keywords" content="herrajes Córdoba, cerraduras Córdoba, accesorios para muebles, herrajes para cocina, herrajes para placares, venta de herrajes Córdoba">
+  <meta name="author" content="Centro Integral del Herraje">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centro Integral del Herraje — Herrajes, Cerraduras y Accesorios | Córdoba</title>
+<meta name="description" content="Herrajes, cerraduras, accesorios para cocina, vestidores y placares en Córdoba. Venta por mayor y menor. Av. Santa Ana 2991 esq. León Pinelo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --naranja:#D97A2B;
+    --naranja-oscuro:#C5661F;
+    --blanco:#FFFFFF;
+    --fondo:#F5F5F5;
+    --gris-texto:#5B5B5B;
+    --negro:#1F1F1F;
+    --linea:#E7E4DE;
+    --bronce:#9C7647;
+
+    --font-display:'Bebas Neue', sans-serif;
+    --font-heading:'Montserrat', sans-serif;
+    --font-body:'Roboto', sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
+
+    --container:1180px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+    .marquee-track{animation-duration:26s !important; animation-iteration-count:infinite !important;}
+  }
+
+  body{
+    background:var(--fondo);
+    color:var(--negro);
+    font-family:var(--font-body);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  section{position:relative;}
+
+  .wrap{
+    max-width:var(--container);
+    margin:0 auto;
+    padding-left:clamp(20px,5vw,48px);
+    padding-right:clamp(20px,5vw,48px);
+  }
+
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--naranja-oscuro);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:18px;height:2px;
+    background:var(--naranja);
+    display:inline-block;
+  }
+
+  h1,h2{
+    font-family:var(--font-display);
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    line-height:1.0;
+  }
+  h3{
+    font-family:var(--font-heading);
+    font-weight:800;
+    letter-spacing:0;
+  }
+
+  h2{
+    font-size:clamp(2.1rem,4.6vw,3.2rem);
+    margin-bottom:14px;
+    color:var(--negro);
+  }
+
+  .section-head{
+    max-width:640px;
+    margin-bottom:44px;
+  }
+  .section-head p{
+    color:var(--gris-texto);
+    font-size:1.02rem;
+    max-width:520px;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 28px;
+    border-radius:10px;
+    font-family:var(--font-heading);
+    font-weight:600;
+    font-size:0.95rem;
+    letter-spacing:0.01em;
+    cursor:pointer;
+    border:1px solid transparent;
+    transition:transform .15s ease, background .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn:focus-visible{outline:2px solid var(--naranja-oscuro); outline-offset:3px;}
+  .btn-primary{
+    background:var(--naranja);
+    color:var(--blanco);
+  }
+  .btn-primary:hover{background:var(--naranja-oscuro);}
+  .btn-ghost{
+    background:var(--blanco);
+    color:var(--negro);
+    border-color:var(--linea);
+  }
+  .btn-ghost:hover{border-color:var(--naranja); color:var(--naranja-oscuro);}
+
+  .icon-wa{width:18px;height:18px;flex:none;}
+
+  /* ---------- Hardware tag component (signature element) ---------- */
+  .hw-tag{
+    position:relative;
+    background:var(--blanco);
+    border:1px solid var(--linea);
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+    padding:28px 26px 26px 44px;
+  }
+  .hw-tag::before{
+    content:'';
+    position:absolute;
+    top:24px;left:20px;
+    width:11px;height:11px;
+    border-radius:50%;
+    background:var(--fondo);
+    border:2px solid #D8D4CC;
+  }
+  .hw-tag::after{
+    content:'';
+    position:absolute;
+    top:29.5px; left:24.5px;
+    width:1px;height:60px;
+    background:linear-gradient(#D8D4CC, transparent);
+    opacity:.7;
+    transform:rotate(8deg);
+    transform-origin:top;
+  }
+
+  /* ---------- Header / Nav ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,0.96);
+    backdrop-filter:blur(8px);
+    border-bottom:3px solid var(--naranja);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-top:14px;padding-bottom:14px;
+  }
+  .brand{
+    display:flex;align-items:center;gap:12px;
+  }
+  .brand-mark{
+    width:40px;height:40px;flex:none;
+    clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%);
+    background:var(--naranja);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-display);
+    font-size:1.1rem;
+    color:var(--blanco);
+  }
+  .brand-name{
+    display:flex;flex-direction:column;line-height:1.15;
+  }
+  .brand-name strong{
+    font-family:var(--font-heading);
+    font-weight:800;
+    font-size:0.9rem;
+    letter-spacing:0.01em;
+    text-transform:uppercase;
+    color:var(--negro);
+  }
+  .brand-name span{
+    font-family:var(--font-mono);
+    font-size:0.64rem;
+    color:var(--gris-texto);
+    letter-spacing:0.03em;
+  }
+  .nav-links{
+    display:flex;gap:28px;
+  }
+  .nav-links a{
+    font-family:var(--font-heading);
+    font-size:0.86rem;font-weight:600;color:var(--negro);
+    position:relative;padding:4px 0;
+  }
+  .nav-links a::after{
+    content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--naranja);
+    transition:width .2s ease;
+  }
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{display:flex;align-items:center;gap:16px;}
+  .nav-cta .btn{padding:10px 18px;font-size:0.85rem;}
+  .hamburger{display:none;background:none;border:none;color:var(--negro);cursor:pointer;padding:6px;}
+  .hamburger svg{width:24px;height:24px;}
+
+  @media (max-width:880px){
+    .nav-links{
+      position:fixed;top:66px;left:0;right:0;
+      background:var(--blanco);
+      border-bottom:1px solid var(--linea);
+      flex-direction:column;gap:0;
+      max-height:0;overflow:hidden;
+      transition:max-height .25s ease;
+    }
+    .nav-links.open{max-height:420px;}
+    .nav-links a{padding:16px 24px;border-bottom:1px solid var(--linea);display:block;}
+    .nav-links a::after{display:none;}
+    .hamburger{display:block;}
+    .nav-cta .btn span{display:none;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding-top:clamp(50px,8vw,80px);
+    padding-bottom:clamp(60px,9vw,100px);
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;
+  }
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;}}
+  .hero h1{
+    font-size:clamp(2.6rem,6.2vw,4.6rem);
+    margin-top:16px;margin-bottom:20px;
+  }
+  .hero h1 em{
+    font-style:normal;color:var(--naranja);
+  }
+  .hero p.lead{
+    font-size:1.08rem;color:var(--gris-texto);
+    max-width:520px;margin-bottom:30px;
+  }
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:26px;}
+  .hero-trust{
+    font-family:var(--font-mono);
+    font-size:0.76rem;color:var(--gris-texto);
+    display:flex;gap:8px;align-items:center;flex-wrap:wrap;
+  }
+  .hero-trust .dot{width:4px;height:4px;background:var(--gris-texto);border-radius:50%;}
+  .hero-media{
+    position:relative;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+    aspect-ratio:4/3.2;
+  }
+  .hero-media img{width:100%;height:100%;object-fit:cover;}
+  .hero-media .tag{
+    position:absolute;bottom:16px;left:16px;
+    background:rgba(255,255,255,.94);
+    padding:8px 14px;border-radius:8px;
+    font-family:var(--font-mono);font-size:0.72rem;color:var(--negro);
+  }
+
+  /* ---------- Brands strip / marquee ---------- */
+  .brands-strip{
+    border-top:1px solid var(--linea);
+    border-bottom:1px solid var(--linea);
+    padding:34px 0 30px;
+    background:var(--blanco);
+  }
+  .brands-strip .label{
+    font-family:var(--font-mono);
+    font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--gris-texto);white-space:nowrap;
+    margin-bottom:22px;
+  }
+  .marquee{
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+    mask-image:linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  }
+  .marquee-track{
+    display:flex;
+    width:max-content;
+    gap:22px;
+    animation:marquee-scroll 26s linear infinite;
+  }
+  .marquee:hover .marquee-track{animation-play-state:paused;}
+  @keyframes marquee-scroll{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  .brand-logo{
+    flex:none;
+    display:flex;align-items:center;gap:12px;
+    background:var(--blanco);
+    border:1px solid var(--linea);
+    border-radius:12px;
+    padding:12px 20px;
+    box-shadow:0 4px 14px rgba(0,0,0,.05);
+  }
+  .brand-logo .mono{
+    width:36px;height:36px;flex:none;
+    border-radius:8px;
+    background:var(--naranja);
+    color:var(--blanco);
+    font-family:var(--font-heading);
+    font-weight:800;
+    font-size:0.8rem;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .brand-logo .mono.alt{background:var(--negro);}
+  .brand-logo .mono.bronce{background:var(--bronce);}
+  .brand-logo .name{
+    font-family:var(--font-heading);
+    font-weight:700;
+    font-size:0.9rem;
+    color:var(--negro);
+    white-space:nowrap;
+  }
+  .marcas-note{
+    font-family:var(--font-mono);
+    font-size:0.76rem;
+    color:var(--bronce);
+    margin-top:20px;
+  }
+
+  /* ---------- Categorías ---------- */
+  .categorias{padding:clamp(64px,8vw,100px) 0;}
+  .cat-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;
+  }
+  .cat-card{
+    background:var(--blanco);
+    border:1px solid var(--linea);
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+    padding:26px 20px;
+    text-align:center;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .cat-card:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(0,0,0,.09);}
+  .cat-card svg{width:30px;height:30px;color:var(--naranja);margin:0 auto 14px;}
+  .cat-card span{
+    font-family:var(--font-heading);font-weight:700;font-size:0.92rem;
+  }
+
+  /* ---------- Catalog / Destacados ---------- */
+  .catalog{padding:clamp(64px,8vw,100px) 0;background:var(--blanco);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);}
+  .tabs{
+    display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px;
+  }
+  .tab-btn{
+    font-family:var(--font-mono);
+    font-size:0.8rem;
+    padding:10px 18px;
+    border:1px solid var(--linea);
+    border-radius:30px;
+    background:var(--fondo);color:var(--gris-texto);
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .tab-btn:hover{color:var(--negro);border-color:var(--naranja);}
+  .tab-btn.active{
+    background:var(--naranja);color:var(--blanco);border-color:var(--naranja);font-weight:600;
+  }
+  .tab-btn:focus-visible{outline:2px solid var(--naranja-oscuro);outline-offset:2px;}
+
+  .panel{display:none;}
+  .panel.active{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;}
+
+  .product-card{
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .product-icon{width:32px;height:32px;color:var(--negro);}
+  .product-card h3{
+    font-size:1.05rem;
+  }
+  .product-spec{
+    font-family:var(--font-mono);
+    font-size:0.76rem;
+    color:var(--gris-texto);
+    line-height:1.5;
+  }
+  .product-footer{
+    display:flex;align-items:center;justify-content:space-between;
+    margin-top:auto;padding-top:14px;border-top:1px dashed var(--linea);
+  }
+  .product-price{
+    font-family:var(--font-mono);font-size:0.76rem;color:var(--bronce);
+  }
+  .product-footer a{
+    font-family:var(--font-heading);
+    font-size:0.8rem;font-weight:700;color:var(--naranja-oscuro);
+    display:flex;align-items:center;gap:5px;
+  }
+  .product-footer a:hover{color:var(--naranja);}
+
+  /* ---------- Why us ---------- */
+  .why-us{padding:clamp(64px,8vw,100px) 0;}
+  .why-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;
+  }
+  .why-card{
+    padding:30px 26px;
+    border:1px solid var(--linea);
+    border-radius:16px;
+    background:var(--blanco);
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+  }
+  .why-card .num{
+    font-family:var(--font-mono);
+    font-size:0.72rem;color:var(--naranja-oscuro);
+    display:block;margin-bottom:16px;
+  }
+  .why-card h3{
+    font-size:1.05rem;margin-bottom:10px;
+  }
+  .why-card p{color:var(--gris-texto);font-size:0.92rem;}
+
+  /* ---------- Services ---------- */
+  .services{padding:clamp(64px,8vw,100px) 0;background:var(--blanco);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);}
+  .services-list{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;
+  }
+  .service-item{
+    background:var(--fondo);
+    border-radius:16px;
+    padding:30px 28px;
+    display:flex;gap:18px;align-items:flex-start;
+  }
+  .service-item svg{width:26px;height:26px;color:var(--naranja);flex:none;margin-top:2px;}
+  .service-item h3{
+    font-size:1rem;margin-bottom:6px;
+  }
+  .service-item p{color:var(--gris-texto);font-size:0.9rem;}
+
+  /* ---------- Gallery ---------- */
+  .gallery{padding:clamp(64px,8vw,100px) 0;}
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+  }
+  @media (max-width:720px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+  .gallery-tile{
+    aspect-ratio:1/1;
+    background:var(--blanco);
+    border:1px solid var(--linea);
+    border-radius:16px;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:16px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+  }
+  .gallery-tile img{
+    position:absolute;inset:0;
+    width:100%;height:100%;object-fit:cover;
+    transition:transform .4s ease;
+  }
+  .gallery-tile:hover img{transform:scale(1.06);}
+  .gallery-tile::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,0.68) 8%, rgba(0,0,0,0.05) 60%);
+  }
+  .gallery-tile .cat,.gallery-tile h4{position:relative;z-index:1;}
+  .gallery-tile .cat{
+    font-family:var(--font-mono);font-size:0.63rem;color:#E9E4DA;
+    letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;
+  }
+  .gallery-tile h4{
+    font-family:var(--font-display);font-weight:400;font-size:1.15rem;
+    text-transform:uppercase;line-height:1.1;
+    color:var(--blanco);
+  }
+  .gallery-tile .dot{
+    position:absolute;top:14px;right:14px;z-index:1;
+    width:8px;height:8px;border-radius:50%;background:var(--naranja);opacity:.95;
+  }
+
+  /* ---------- Testimonials ---------- */
+  .testimonials{padding:clamp(64px,8vw,100px) 0;background:var(--blanco);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);}
+  .testimonios-header{
+    display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap;
+    margin-bottom:40px;
+  }
+  .testimonios-header .section-head{margin-bottom:0;}
+  .btn-reviews{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--blanco);border:1px solid var(--linea);color:var(--negro);
+    padding:12px 22px;border-radius:10px;
+    font-family:var(--font-heading);font-size:0.78rem;font-weight:700;
+    letter-spacing:0.03em;text-transform:uppercase;
+    transition:background .2s,color .2s,border-color .2s,transform .15s;
+    white-space:nowrap;cursor:pointer;align-self:flex-start;
+  }
+  .btn-reviews:hover{background:var(--naranja);color:var(--blanco);border-color:var(--naranja);transform:translateY(-2px);}
+  .btn-reviews:focus-visible{outline:2px solid var(--naranja-oscuro);outline-offset:3px;}
+  .testi-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;
+  }
+  .stars{font-size:13px;color:var(--naranja);margin-bottom:14px;letter-spacing:2px;}
+  .testi-card p.quote{
+    font-size:1rem;color:var(--negro);margin-bottom:16px;font-style:italic;line-height:1.6;
+  }
+  .testi-name{
+    font-family:var(--font-mono);font-size:0.76rem;color:var(--bronce);
+  }
+  .testi-date{
+    font-family:var(--font-mono);font-size:0.68rem;color:var(--gris-texto);margin-top:3px;
+  }
+
+  /* ---------- Modal: Dejar reseña ---------- */
+  .modal-bg{
+    display:none;position:fixed;inset:0;z-index:200;
+    background:rgba(20,16,10,0.68);
+    align-items:center;justify-content:center;padding:16px;
+  }
+  .modal-bg.open{display:flex;}
+  .modal{
+    background:var(--blanco);width:100%;max-width:480px;
+    padding:34px;border-radius:20px;position:relative;
+    box-shadow:0 24px 60px rgba(0,0,0,.28);
+  }
+  .modal-close{
+    position:absolute;top:16px;right:18px;
+    background:none;border:none;cursor:pointer;
+    font-size:1.6rem;color:var(--gris-texto);line-height:1;
+  }
+  .modal-close:hover{color:var(--negro);}
+  .modal h3{
+    font-family:var(--font-display);font-size:1.9rem;letter-spacing:0.03em;
+    margin-bottom:22px;color:var(--negro);text-transform:uppercase;
+  }
+  .modal-form{display:flex;flex-direction:column;gap:16px;}
+  .modal-form label{
+    font-family:var(--font-mono);font-size:0.66rem;letter-spacing:0.08em;
+    text-transform:uppercase;color:var(--gris-texto);display:block;margin-bottom:6px;
+  }
+  .modal-form input,.modal-form textarea{
+    width:100%;border:1px solid var(--linea);padding:12px 14px;border-radius:8px;
+    font-family:var(--font-body);font-size:0.9rem;color:var(--negro);
+    outline:none;background:var(--fondo);transition:border-color .2s;
+  }
+  .modal-form input:focus,.modal-form textarea:focus{border-color:var(--naranja);}
+  .modal-form textarea{min-height:100px;resize:vertical;}
+  .modal-stars{display:flex;gap:8px;margin-bottom:4px;}
+  .modal-star{font-size:1.7rem;cursor:pointer;color:var(--linea);transition:color .15s;user-select:none;}
+  .modal-star.active{color:var(--naranja);}
+  .modal-submit{
+    background:var(--naranja);color:var(--blanco);border:none;
+    padding:14px 24px;border-radius:10px;
+    font-family:var(--font-heading);font-size:0.85rem;font-weight:700;
+    letter-spacing:0.02em;text-transform:uppercase;cursor:pointer;
+    transition:background .2s;width:100%;
+  }
+  .modal-submit:hover{background:var(--naranja-oscuro);}
+  .modal-note{
+    font-family:var(--font-mono);font-size:0.72rem;color:var(--gris-texto);
+    text-align:center;line-height:1.5;
+  }
+  @media(max-width:600px){
+    .testimonios-header{flex-direction:column;}
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq{padding:clamp(64px,8vw,100px) 0;}
+  .faq-list{max-width:760px;}
+  details{
+    border-bottom:1px solid var(--linea);
+    padding:20px 0;
+  }
+  summary{
+    cursor:pointer;
+    list-style:none;
+    display:flex;align-items:center;justify-content:space-between;
+    font-family:var(--font-heading);
+    font-weight:700;font-size:1rem;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary .plus{
+    font-family:var(--font-mono);color:var(--naranja-oscuro);font-size:1.2rem;flex:none;margin-left:16px;
+    transition:transform .2s ease;
+  }
+  details[open] summary .plus{transform:rotate(45deg);}
+  details p{color:var(--gris-texto);font-size:0.94rem;margin-top:14px;max-width:640px;}
+
+  /* ---------- Contact ---------- */
+  .contact{padding:clamp(64px,8vw,100px) 0;background:var(--blanco);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);}
+  .contact-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;
+  }
+  @media (max-width:880px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-info .hw-tag{margin-bottom:18px;}
+  .contact-row{display:flex;gap:14px;margin-bottom:20px;align-items:flex-start;}
+  .contact-row svg{width:20px;height:20px;color:var(--naranja);flex:none;margin-top:2px;}
+  .contact-row strong{display:block;font-family:var(--font-heading);font-size:0.95rem;margin-bottom:2px;}
+  .contact-row span{color:var(--gris-texto);font-size:0.9rem;}
+  .map-frame{
+    width:100%;height:100%;min-height:320px;
+    border:1px solid var(--linea);border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+  }
+  .map-frame iframe{width:100%;height:100%;min-height:320px;border:0;}
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    padding:clamp(64px,9vw,120px) 0;
+    background:var(--naranja);
+    color:var(--blanco);
+    text-align:center;
+  }
+  .final-cta h2{color:var(--blanco);}
+  .final-cta p{
+    color:#FFEFE0;font-size:1.05rem;max-width:520px;margin:0 auto 32px;
+  }
+  .final-cta .btn-primary{
+    background:var(--negro);color:var(--blanco);
+  }
+  .final-cta .btn-primary:hover{background:#000;}
+
+  /* ---------- Footer ---------- */
+  footer{
+    padding:36px 0;
+    background:var(--negro);
+    color:var(--fondo);
+  }
+  footer .wrap{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  }
+  footer .foot-brand{display:flex;align-items:center;gap:12px;}
+  footer small{color:#B9B6AF;font-family:var(--font-mono);font-size:0.72rem;}
+  footer .foot-links{display:flex;gap:20px;}
+  footer .foot-links a{color:#D8D4CC;font-size:0.85rem;}
+  footer .foot-links a:hover{color:var(--naranja);}
+
+  /* ---------- WhatsApp float ---------- */
+  .wa-float{
+    position:fixed;bottom:22px;right:22px;z-index:60;
+    width:56px;height:56px;border-radius:50%;
+    background:#25D366;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 20px rgba(0,0,0,.28);
+    transition:transform .15s ease;
+  }
+  .wa-float:hover{transform:scale(1.08);}
+  .wa-float svg{width:28px;height:28px;color:#fff;}
+  .wa-float:focus-visible{outline:2px solid var(--naranja-oscuro);outline-offset:3px;}
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.is-visible{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav wrap">
+    <a href="#" class="brand">
+      <span class="brand-mark">CIH</span>
+      <span class="brand-name">
+        <strong>Centro Integral del Herraje</strong>
+        <span>Herrajes · Cerraduras · Accesorios</span>
+      </span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#categorias">Catálogo</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://wa.me/5493516354737?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20producto" target="_blank" rel="noopener">
+        <svg class="icon-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18a8 8 0 0 1-4.07-1.11l-.29-.17-3 .79.8-2.92-.19-.3A8 8 0 1 1 12 20zm4.4-5.8c-.24-.12-1.43-.7-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.01-.36.11-.48.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
+        <span>Escribinos</span>
+      </a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <!-- COMPLETAR: reemplazar la imagen del local por una foto real y prolija
+       (sin el recorte de pantalla de Google). Se puede usar como base la
+       foto del frente que encontraste, recortada. -->
+  <section class="hero" id="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="eyebrow">Herrajes · Cerraduras · Accesorios — Córdoba</div>
+        <h1>Todo el herraje<br>que tu obra<br>necesita, <em>en un lugar</em>.</h1>
+        <p class="lead">Herrajes, cerraduras y accesorios nacionales e importados para cocina, vestidores y placares. Venta por mayor y por menor, con atención personalizada.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="https://wa.me/5493516354737?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20producto" target="_blank" rel="noopener">
+            <svg class="icon-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18a8 8 0 0 1-4.07-1.11l-.29-.17-3 .79.8-2.92-.19-.3A8 8 0 1 1 12 20zm4.4-5.8c-.24-.12-1.43-.7-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.01-.36.11-.48.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
+            Escribinos por WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="#categorias">Ver catálogo</a>
+        </div>
+        <div class="hero-trust">
+          <span>Mayor y menor</span><span class="dot"></span>
+          <span>Av. Santa Ana 2991 esq. León Pinelo</span><span class="dot"></span>
+          <span>@centro.integral.del.herraje</span>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="https://loremflickr.com/700/560/hardwarestore,facade" alt="Frente del local Centro Integral del Herraje" loading="lazy">
+        <span class="tag">📍 Av. Santa Ana 2991, Córdoba</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CATEGORÍAS ================= -->
+  <section class="categorias" id="categorias">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Catálogo</div>
+        <h2>Categorías</h2>
+        <p>Un vistazo rápido a todo lo que manejamos. Más abajo te mostramos algunos productos puntuales.</p>
+      </div>
+      <div class="cat-grid">
+        <a href="#destacados" class="cat-card reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="9" width="14" height="4" rx="1"/><circle cx="8" cy="11" r="0.6" fill="currentColor"/><circle cx="16" cy="11" r="0.6" fill="currentColor"/></svg>
+          <span>Herrajes</span>
+        </a>
+        <a href="#destacados" class="cat-card reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="4" width="4" height="16" rx="1"/><circle cx="8" cy="12" r="0.6" fill="currentColor"/></svg>
+          <span>Cerraduras</span>
+        </a>
+        <a href="#destacados" class="cat-card reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v6M9 5l3 3 3-3M6 14l4-2 2 4-4 2z"/><path d="M14 16l6 6"/></svg>
+          <span>Accesorios</span>
+        </a>
+        <a href="#destacados" class="cat-card reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M4 9h16M9 3v18"/></svg>
+          <span>Vestidores</span>
+        </a>
+        <a href="#destacados" class="cat-card reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="6" width="16" height="12" rx="1"/><path d="M8 6v12M12 6v12M16 6v12"/></svg>
+          <span>Cocina</span>
+        </a>
+        <a href="#destacados" class="cat-card reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="3" width="7" height="18" rx="1"/><rect x="13" y="3" width="7" height="18" rx="1"/></svg>
+          <span>Placares</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BRANDS STRIP ================= -->
+  <!-- COMPLETAR: hay más marcas en el cartel del local (Kallay, FC Metalúrgica,
+       IRMA, Sidañez Herrajes, Tornillos Caser, Herbron, Milord, Modernplast,
+       Jaque Cerraduras) pero la foto está tomada en ángulo y es vieja —
+       confirmar la escritura exacta de cada una antes de dejarlas así. -->
+  <!-- COMPLETAR: los cuadraditos de color con las iniciales son placeholder
+       de logo. Cuando tengas los isologos reales de cada marca, cambiá
+       <div class="mono">XX</div> por <img src="logo-marca.png" alt="Marca"> -->
+  <section class="brands-strip" id="marcas">
+    <div class="wrap">
+      <span class="label">Trabajamos con</span>
+    </div>
+    <div class="marquee">
+      <div class="marquee-track">
+        <div class="brand-logo"><div class="mono">RZ</div><span class="name">RONZEN</span></div>
+        <div class="brand-logo"><div class="mono alt">BZ</div><span class="name">BRONZEN</span></div>
+        <div class="brand-logo"><div class="mono bronce">CN</div><span class="name">CONARCO</span></div>
+        <div class="brand-logo"><div class="mono">PN</div><span class="name">MR PAMPA NEO</span></div>
+        <div class="brand-logo"><div class="mono alt">JQ</div><span class="name">JAQUE CERRADURAS</span></div>
+        <div class="brand-logo"><div class="mono bronce">HB</div><span class="name">HERBRON</span></div>
+        <!-- grupo duplicado para que el loop sea continuo -->
+        <div class="brand-logo"><div class="mono">RZ</div><span class="name">RONZEN</span></div>
+        <div class="brand-logo"><div class="mono alt">BZ</div><span class="name">BRONZEN</span></div>
+        <div class="brand-logo"><div class="mono bronce">CN</div><span class="name">CONARCO</span></div>
+        <div class="brand-logo"><div class="mono">PN</div><span class="name">MR PAMPA NEO</span></div>
+        <div class="brand-logo"><div class="mono alt">JQ</div><span class="name">JAQUE CERRADURAS</span></div>
+        <div class="brand-logo"><div class="mono bronce">HB</div><span class="name">HERBRON</span></div>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="marcas-note">+ otras marcas nacionales e importadas — </p>
+    </div>
+  </section>
+
+  <!-- ================= PRODUCTOS DESTACADOS ================= -->
+  <section class="catalog" id="destacados">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Productos destacados</div>
+        <h2>Algunos de los que<br>más se llevan</h2>
+        <p>El catálogo completo es mucho más grande — consultanos por lo que estés buscando.</p>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button class="tab-btn active" data-tab="muebles">Herrajes para muebles</button>
+        <button class="tab-btn" data-tab="aberturas">Cerraduras &amp; aberturas</button>
+        <button class="tab-btn" data-tab="herramientas">Herramientas</button>
+        <button class="tab-btn" data-tab="soldadura">Soldadura &amp; complementos</button>
+      </div>
+
+      <div class="panel active" data-panel="muebles">
+        <div class="product-card hw-tag">
+          <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="9" width="14" height="4" rx="1"/><circle cx="8" cy="11" r="0.6" fill="currentColor"/><circle cx="16" cy="11" r="0.6" fill="currentColor"/></svg>
+          <h3>Manijas para muebles</h3>
+          <p class="product-spec">Varios acabados: bronce, negro, dorado y blanco</p>
+          <div class="product-footer">
+            <span class="product-price">Consultar precio</span>
+            <a href="https://wa.me/5493516354737?text=Hola!%20Quer%C3%ADa%20consultar%20por%20manijas%20para%20muebles" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </div>
+        <div class="product-card hw-tag">
+          <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 4v16M6 12h9a3 3 0 0 0 3-3V4"/></svg>
+          <h3>Bisagra cazoleta codo 0°</h3>
+          <p class="product-spec">Cierre suave · apertura amplia · Bronzen</p>
+          <div class="product-footer">
+            <span class="product-price">Consultar precio</span>
+            <a href="https://wa.me/5493516354737?text=Hola!%20Quer%C3%ADa%20consultar%20por%20bisagras%20cazoleta" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </div>
+        <div class="product-card hw-tag">
+          <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="6" width="16" height="12" rx="1"/><path d="M8 6v12M12 6v12M16 6v12"/></svg>
+          <h3>Cubiertero de cocina extensible</h3>
+          <p class="product-spec">3 medidas: 26–44cm / 30–51cm / 32–53cm</p>
+          <div class="product-footer">
+            <span class="product-price">Consultar precio</span>
+            <a href="https://wa.me/5493516354737?text=Hola!%20Quer%C3%ADa%20consultar%20por%20el%20cubiertero%20de%20cocina" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" data-panel="aberturas">
+        <div class="product-card hw-tag">
+          <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="4" width="4" height="16" rx="1"/><circle cx="8" cy="12" r="0.6" fill="currentColor"/></svg>
+          <h3>Manija rectangular acero inoxidable</h3>
+          <p class="product-spec">Acabado inoxidable, para puertas de acceso</p>
+          <div class="product-footer">
+            <span class="product-price">Consultar precio</span>
+            <a href="https://wa.me/5493516354737?text=Hola!%20Quer%C3%ADa%20consultar%20por%20la%20manija%20rectangular" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </div>
+        <div class="product-card hw-tag">
+          <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18V8l8-4 8 4v10"/><path d="M4 18h16M9 18v-6h6v6"/></svg>
+          <h3>Kit granero MR Pampa Neo</h3>
+          <p class="product-spec">Varias medidas · para puertas corredizas estilo granero</p>
+          <div class="product-footer">
+            <span class="product-price">Consultar precio</span>
+            <a href="https://wa.me/5493516354737?text=Hola!%20Quer%C3%ADa%20consultar%20por%20el%20kit%20granero" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" data-panel="herramientas">
+        <div class="product-card hw-tag">
+          <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="9" width="10" height="6" rx="1"/><path d="M13 11h6l2 2-2 2h-6"/></svg>
+          <h3>Taladro atornillador inalámbrico Ronzen 7L-10</h3>
+          <p class="product-spec">Incluye 2 baterías · 21V</p>
+          <div class="product-footer">
+            <span class="product-price">Consultar precio</span>
+            <a href="https://wa.me/5493516354737?text=Hola!%20Quer%C3%ADa%20consultar%20por%20el%20taladro%20Ronzen" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" data-panel="soldadura">
+        <div class="product-card hw-tag">
+          <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v6M9 5l3 3 3-3M6 14l4-2 2 4-4 2z"/><path d="M14 16l6 6"/></svg>
+          <h3>Electrodos para soldadura Conarco 2,5mm</h3>
+          <p class="product-spec">Se vende fraccionado, desde 1/2 kilo</p>
+          <div class="product-footer">
+            <span class="product-price">Consultar precio</span>
+            <a href="https://wa.me/5493516354737?text=Hola!%20Quer%C3%ADa%20consultar%20por%20electrodos%20Conarco" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </div>
+        <!-- COMPLETAR: sumar más productos de esta categoría si tienen -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= POR QUÉ ELEGIRNOS ================= -->
+  <section class="why-us" id="nosotros">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Por qué elegirnos</div>
+        <h2>No vendemos por vender</h2>
+        <p>Herrajería puede ser un tema técnico. Nuestro trabajo es ayudarte a elegir la pieza correcta, no solo despacharte una caja.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <span class="num">01</span>
+          <h3>Atención personalizada</h3>
+          <p>Te asesoramos según tu proyecto real, no según lo que sobra en el estante.</p>
+        </div>
+        <div class="why-card reveal">
+          <span class="num">02</span>
+          <h3>Marcas de confianza</h3>
+          <p>Herrajes y cerraduras nacionales e importados, de marcas reconocidas del rubro.</p>
+        </div>
+        <div class="why-card reveal">
+          <span class="num">03</span>
+          <h3>Mayor y menor</h3>
+          <p>Ya seas particular o revendedor, trabajamos ambas puntas.</p>
+        </div>
+        <div class="why-card reveal">
+          <span class="num">04</span>
+          <h3>Ubicación accesible</h3>
+          <p>Av. Santa Ana 2991, esquina León Pinelo — fácil de llegar y estacionar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICIOS ================= -->
+  <section class="services" id="servicios">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Servicios</div>
+        <h2>Cómo te podemos ayudar</h2>
+      </div>
+      <div class="services-list">
+        <div class="service-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+          <div>
+            <h3>Venta por mayor y menor</h3>
+            <p>Herrajes, cerraduras y accesorios para muebles, cocina, vestidores, placares y obra.</p>
+          </div>
+        </div>
+        <div class="service-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="3"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/></svg>
+          <div>
+            <h3>Atención en el mostrador</h3>
+            <p>Te ayudamos a elegir bien mientras comprás, sin vueltas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALERÍA ================= -->
+  <!-- COMPLETAR: reemplazar por fotos reales del local y de producto -->
+  <section class="gallery" id="galeria">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Galería</div>
+        <h2>Así es Centro Integral del Herraje</h2>
+        <p>Fotos del local y de producto — mismo espacio que usamos en @centro.integral.del.herraje.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-tile reveal">
+          <img src="https://loremflickr.com/500/500/hardware,workshop" alt="Mostrador y atención" loading="lazy">
+          <span class="dot"></span><span class="cat">Local</span><h4>Mostrador &amp; atención</h4>
+        </div>
+        <div class="gallery-tile reveal">
+          <img src="https://loremflickr.com/500/500/doorhandle,brass" alt="Manijas y bisagras" loading="lazy">
+          <span class="dot"></span><span class="cat">Producto</span><h4>Manijas &amp; bisagras</h4>
+        </div>
+        <div class="gallery-tile reveal">
+          <img src="https://loremflickr.com/500/500/drill,tool" alt="Herramientas" loading="lazy">
+          <span class="dot"></span><span class="cat">Producto</span><h4>Herramientas</h4>
+        </div>
+        <div class="gallery-tile reveal">
+          <img src="https://loremflickr.com/500/500/barndoor,sliding" alt="Kit granero" loading="lazy">
+          <span class="dot"></span><span class="cat">Producto</span><h4>Kit granero</h4>
+        </div>
+        <div class="gallery-tile reveal">
+          <img src="https://loremflickr.com/500/500/lock,doorlock" alt="Cerraduras y manijas" loading="lazy">
+          <span class="dot"></span><span class="cat">Producto</span><h4>Cerraduras &amp; manijas</h4>
+        </div>
+        <div class="gallery-tile reveal">
+          <img src="https://loremflickr.com/500/500/toolstore,shelves" alt="Exhibición de productos" loading="lazy">
+          <span class="dot"></span><span class="cat">Local</span><h4>Exhibición de productos</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OPINIONES ================= -->
+  <!-- COMPLETAR: estos son textos de ejemplo. Reemplazar por reseñas reales
+       (Google Maps / IG / WhatsApp) -->
+  <section class="testimonials" id="opiniones">
+    <div class="wrap">
+      <div class="testimonios-header reveal">
+        <div class="section-head">
+          <div class="eyebrow">Opiniones</div>
+          <h2>Lo que dicen los clientes</h2>
+        </div>
+        <button class="btn-reviews" onclick="openModal()">★ Dejar reseña en Google</button>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card hw-tag reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Encontré todo lo que necesitaba para el taller en un solo lugar, y me asesoraron bien con las medidas."</p>
+          <span class="testi-name">Ejemplo de reseña</span>
+          <p class="testi-date">Hace 2 semanas · vía Google</p>
+        </div>
+        <div class="testi-card hw-tag reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Buena atención, te explican las diferencias entre marcas antes de comprar."</p>
+          <span class="testi-name">Ejemplo de reseña</span>
+          <p class="testi-date">Hace 1 mes · vía Google</p>
+        </div>
+        <div class="testi-card hw-tag reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Tenían el herraje puntual que estaba buscando y no lo conseguía en otro lado."</p>
+          <span class="testi-name">Ejemplo de reseña,</span>
+          <p class="testi-date">Hace 3 semanas · vía Google</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Preguntas frecuentes</div>
+        <h2>Antes de escribirnos</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details>
+          <summary>¿Puedo consultar precios antes de ir al local?<span class="plus">+</span></summary>
+          <p>Sí. Escribinos por WhatsApp con el producto que buscás y te pasamos precio y disponibilidad.</p>
+        </details>
+        <details>
+          <summary>¿Venden por mayor?<span class="plus">+</span></summary>
+          <p>Sí, trabajamos venta por mayor y por menor. Consultanos según el volumen que necesites.</p>
+        </details>
+        <details>
+          <summary>¿Hacen envíos?<span class="plus">+</span></summary>
+          <p>Consultanos por WhatsApp y te confirmamos las opciones según tu zona.</p>
+        </details>
+        <details>
+          <summary>¿Trabajan con pedidos especiales?<span class="plus">+</span></summary>
+          <p>Si no encontrás lo que buscás en el catálogo, contanos qué necesitás y te decimos si lo podemos conseguir.</p>
+        </details>
+        <details>
+          <summary>¿Qué medios de pago aceptan?<span class="plus">+</span></summary>
+          <p>Consultá los medios de pago disponibles al momento de tu compra.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
+  <section class="contact" id="contacto">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Ubicación &amp; contacto</div>
+        <h2>Te esperamos</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="hw-tag">
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <div><strong>Dirección</strong><span>Av. Santa Ana 2991, esq. León Pinelo — Córdoba</span></div>
+            </div>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5h4l2 5-2.5 1.5a11 11 0 0 0 5 5L13 14l5 2v4a2 2 0 0 1-2 2C8.5 22 2 15.5 2 7a2 2 0 0 1 1-2z"/></svg>
+              <div><strong>WhatsApp</strong><span>351 635 4737</span></div>
+            </div>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor"/></svg>
+              <div><strong>Instagram</strong><span>@centro.integral.del.herraje</span></div>
+            </div>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              <!-- COMPLETAR: confirmar horario real de atención -->
+              <div><strong>Horarios</strong><span>Horario comercial — confirmá el día y horario por WhatsApp</span></div>
+            </div>
+          </div>
+          <a class="btn btn-primary" href="https://wa.me/5493516354737?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20producto" target="_blank" rel="noopener">
+            <svg class="icon-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18a8 8 0 0 1-4.07-1.11l-.29-.17-3 .79.8-2.92-.19-.3A8 8 0 1 1 12 20zm4.4-5.8c-.24-.12-1.43-.7-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.01-.36.11-.48.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
+            Escribinos ahora
+          </a>
+        </div>
+        <div class="map-frame reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Av.+Santa+Ana+2991,+C%C3%B3rdoba,+Argentina&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación Centro Integral del Herraje">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA FINAL ================= -->
+  <section class="final-cta">
+    <div class="wrap">
+      <h2>¿Listo para encarar tu proyecto?</h2>
+      <p>Contanos qué estás armando y te decimos qué herraje necesitás — sin vueltas.</p>
+      <a class="btn btn-primary" href="https://wa.me/5493516354737?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20producto" target="_blank" rel="noopener">
+        <svg class="icon-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18a8 8 0 0 1-4.07-1.11l-.29-.17-3 .79.8-2.92-.19-.3A8 8 0 1 1 12 20zm4.4-5.8c-.24-.12-1.43-.7-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.01-.36.11-.48.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
+        Escribinos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-brand">
+      <span class="brand-mark" style="width:32px;height:32px;font-size:0.85rem;">CIH</span>
+      <small>Centro Integral del Herraje · Av. Santa Ana 2991, Córdoba</small>
+    </div>
+    <div class="foot-links">
+      <a href="https://wa.me/5493516354737" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5493516354737?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20producto" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18a8 8 0 0 1-4.07-1.11l-.29-.17-3 .79.8-2.92-.19-.3A8 8 0 1 1 12 20zm4.4-5.8c-.24-.12-1.43-.7-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.01-.36.11-.48.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
+</a>
+
+<!-- MODAL RESEÑA -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Cerrar">×</button>
+    <h3>Dejar reseña</h3>
+    <div class="modal-form">
+      <div>
+        <label>Tu calificación</label>
+        <div class="modal-stars" id="modalStars">
+          <span class="modal-star" data-val="1">★</span>
+          <span class="modal-star" data-val="2">★</span>
+          <span class="modal-star" data-val="3">★</span>
+          <span class="modal-star" data-val="4">★</span>
+          <span class="modal-star" data-val="5">★</span>
+        </div>
+      </div>
+      <div>
+        <label for="m-nombre">Tu nombre</label>
+        <input type="text" id="m-nombre" placeholder="Ej: Matías R.">
+      </div>
+      <div>
+        <label for="m-texto">Tu experiencia</label>
+        <textarea id="m-texto" placeholder="Contanos cómo te fue en Centro Integral del Herraje..."></textarea>
+      </div>
+      <button class="modal-submit" onclick="submitReview()">Publicar en Google →</button>
+      <p class="modal-note">Te vamos a redirigir a Google Maps para que confirmes tu reseña desde tu cuenta.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // COMPLETAR: reemplazar TU_PLACE_ID con el Place ID real del negocio.
+  // Se consigue buscando el local en maps.google.com > Compartir > el ID
+  // aparece en el link que genera.
+  let selectedStars = 5;
+
+  function openModal(){ document.getElementById('modalBg').classList.add('open'); }
+  function closeModal(){ document.getElementById('modalBg').classList.remove('open'); }
+
+  const modalStarsEls = document.querySelectorAll('.modal-star');
+  modalStarsEls.forEach(s => {
+    s.addEventListener('mouseover', () => {
+      const v = +s.dataset.val;
+      modalStarsEls.forEach(st => st.classList.toggle('active', +st.dataset.val <= v));
+    });
+    s.addEventListener('click', () => {
+      selectedStars = +s.dataset.val;
+      modalStarsEls.forEach(st => st.classList.toggle('active', +st.dataset.val <= selectedStars));
+    });
+  });
+  document.getElementById('modalStars').addEventListener('mouseleave', () => {
+    modalStarsEls.forEach(st => st.classList.toggle('active', +st.dataset.val <= selectedStars));
+  });
+  modalStarsEls.forEach(st => st.classList.toggle('active', +st.dataset.val <= selectedStars));
+
+  document.getElementById('modalBg').addEventListener('click', function(e){
+    if (e.target === this) closeModal();
+  });
+
+  function submitReview(){
+    window.open('https://search.google.com/local/writereview?placeid=TU_PLACE_ID', '_blank');
+    closeModal();
+  }
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"HardwareStore",
+ "name":"Centro Integral del Herraje",
+ "address":{
+   "@type":"PostalAddress",
+   "streetAddress":"Av. Santa Ana 2991",
+   "addressLocality":"Córdoba",
+   "addressCountry":"AR"
+ },
+ "telephone":"+54 351 6354737"
+}
+</script>
+
+<script>
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const navLinks = document.getElementById('navLinks');
+  hamburgerBtn.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburgerBtn.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburgerBtn.setAttribute('aria-expanded', 'false');
+  }));
+
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.panel');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelector('.panel[data-panel="' + btn.dataset.tab + '"]').classList.add('active');
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+  }
+</script>
+
+</body>
+</html>
